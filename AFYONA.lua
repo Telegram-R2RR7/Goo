@@ -299,7 +299,7 @@ return kk
 end
 function The_ControllerAll(UserId)
 ControllerAll = false
-local ListSudos ={Sudo_Id,5521078709,5054546767}
+local ListSudos ={Sudo_Id,5521078709,5386549632}
 for k, v in pairs(ListSudos) do
 if tonumber(UserId) == tonumber(v) then
 ControllerAll = true
@@ -320,7 +320,7 @@ Special = Redis:sismember(AFYONA .."Special:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
 if UserId == 5521078709 then
 Status = 'المبرمج افيونا '
-elseif UserId == 5054546767 then
+elseif UserId == 5386549632 then
 Status = 'مطور السورس'
 elseif UserId == Sudo_Id then  
 Status = 'المطور الاساسي'
@@ -899,7 +899,7 @@ Special = Redis:sismember(AFYONA .."Special:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
 if UserId == 5521078709 then
 Status = true
-elseif UserId == 5054546767 then
+elseif UserId == 5386549632 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -941,7 +941,7 @@ Special = Redis:sismember(AFYONA .."Special:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
 if UserId == 5521078709 then
 Status = true
-elseif UserId == 5054546767 then
+elseif UserId == 5386549632 then
 Status = true
 elseif UserId == Sudo_Id then    
 Status = true
@@ -1106,7 +1106,7 @@ end
 if tonumber(msg.sender.user_id) == 5521078709 then
 msg.Name_Controller = 'المبرمج افيونا  '
 msg.The_Controller = 1
-elseif tonumber(msg.sender.user_id) == 5054546767 then
+elseif tonumber(msg.sender.user_id) == 5386549632 then
 msg.Name_Controller = 'مطور السورس '
 msg.The_Controller = 1
 elseif The_ControllerAll(msg.sender.user_id) == true then  
@@ -1364,7 +1364,7 @@ keyboard.inline_keyboard = {
 {text = ' تفعيل ', callback_data = msg.sender.user_id..'/onlinebott'..msg_chat_id},
 },
 {
-{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '},
+{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'},
 }
 }
 local rep = msg.id/2097152/0.5
@@ -6389,7 +6389,7 @@ end
 if UserId == "5521078709" then
 return send(msg_chat_id,msg_id,"\n*⌔ عذرآ لا تستطيع استخدام الامر على المبرمج افـيـونا  *","md",true)  
 end
-if UserId == "5054546767" then
+if UserId == "5386549632" then
 return send(msg_chat_id,msg_id,"\n*⌔ عذرآ لا تستطيع استخدام الامر على مطور السورس*","md",true)  
 end
 if Redis:sismember(AFYONA .."BanAll:Groups",UserId) then
@@ -6426,7 +6426,7 @@ end
 if UserId == "5521078709" then
 return send(msg_chat_id,msg_id,"\n*⌔ عذرآ لا تستطيع استخدام الامر على المبرمج افـيونا  *","md",true)  
 end
-if UserId == "5054546767" then
+if UserId == "5386549632" then
 return send(msg_chat_id,msg_id,"\n*⌔ عذرآ لا تستطيع استخدام الامر على مطور السورس *","md",true)  
 end
 local UserInfo = LuaTele.getUser(UserId)
@@ -9164,7 +9164,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -10258,7 +10258,7 @@ if not msg.Manger then
 return send(msg_chat_id,msg_id,'\n*⌔ هاذا الامر يخص  '..Controller_Num(6)..' * ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/l_YT_l '}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
 return send(msg.chat_id,msg.id,'*\n⌔ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(AFYONA .."List:Manager"..msg_chat_id.."")
@@ -10286,7 +10286,7 @@ if text == ("مسح الردود الانلاين") then
   return send(msg_chat_id,msg_id,'\n*⌔ هاذا الامر يخص  '..Controller_Num(6)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/l_YT_l '}, },}}
+  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
   return send(msg.chat_id,msg.id,'*\n⌔ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(AFYONA .."List:Manager:inline"..msg_chat_id.."")
@@ -10505,7 +10505,7 @@ if text == "حذف رد انلاين" then
   return send(msg_chat_id,msg_id,'\n*⌔ هاذا الامر يخص  '..Controller_Num(7)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/l_YT_l '}, },}}
+  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
   return send(msg.chat_id,msg.id,'*\n⌔ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local reply_markup = LuaTele.replyMarkup{
@@ -10525,7 +10525,7 @@ if text == ("الردود الانلاين") then
   return send(msg_chat_id,msg_id,'\n*⌔ هاذا الامر يخص  '..Controller_Num(6)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/l_YT_l '}, },}}
+  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
   return send(msg.chat_id,msg.id,'*\n⌔ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(AFYONA .."List:Manager:inline"..msg_chat_id.."")
@@ -11200,7 +11200,7 @@ if not msg.Admin then
 return send(msg_chat_id,msg_id,'\n*⌔ هاذا الامر يخص  '..Controller_Num(7)..' * ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/l_YT_l '}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
 return send(msg.chat_id,msg.id,'*\n⌔ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -11315,7 +11315,7 @@ if not msg.ControllerBot then
 return send(msg_chat_id,msg_id,'\n*⌔ هاذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/l_YT_l '}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
 return send(msg.chat_id,msg.id,'*\n⌔ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(AFYONA .."List:Rd:Sudo")
@@ -11341,7 +11341,7 @@ if not msg.ControllerBot then
 return send(msg_chat_id,msg_id,'\n*⌔ هاذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/l_YT_l '}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
 return send(msg.chat_id,msg.id,'*\n⌔ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(AFYONA .."List:Rd:Sudo")
@@ -12176,7 +12176,7 @@ end
 if text == "انا مين" then
 if msg.sender.user_id == tonumber(5521078709) then
 send(msg_chat_id,msg_id,"⌔ انت افيـونا  مبرمج السورس يقلبي🌚♥","md",true)
-elseif msg.sender.user_id == tonumber(5054546767) then
+elseif msg.sender.user_id == tonumber(5386549632) then
 send(msg_chat_id,msg_id,"⌔ انت مطور السورس يقلبي🌚♥","md",true)
 elseif msg.sender.user_id == tonumber(Sudo_Id) then
 send(msg_chat_id,msg_id,"⌔ انت المطور الاساسي يقلبي🌚♥","md",true)
@@ -12215,7 +12215,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {{text = 'ترجمه الي العربية', data = msg.sender.user_id..'toar'},{text = 'ترجمه الي الانجليزية', data = msg.sender.user_id..'toen'}},
-{{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = "https://t.me/l_YT_l "}},
+{{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = "https://t.me/R125R"}},
 }
 }
 return send(msg_chat_id,msg_id, [[*
@@ -12322,7 +12322,7 @@ data = {
 {text = '𝑀𝑃3', data = msg.sender.user_id..'/mp3'..msg_id}, {text = '𝑀𝑃4', data = msg.sender.user_id..'/mp4'..msg_id}, 
 },
 {
-{text = '᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ   ', url = "https://t.me/l_YT_l "}
+{text = '᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ   ', url = "https://t.me/R125R"}
 },
 }
 }
@@ -12879,7 +12879,7 @@ if not msg.ControllerBot then
 return send(msg_chat_id,msg_id,'\n*⌔ هاذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/l_YT_l '}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
 return send(msg.chat_id,msg.id,'*\n⌔ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(AFYONA .."List:Rd:Sudo:mz")
@@ -12905,7 +12905,7 @@ if not msg.ControllerBot then
 return send(msg_chat_id,msg_id,'\n*⌔ هاذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/l_YT_l '}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
 return send(msg.chat_id,msg.id,'*\n⌔ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(AFYONA .."List:Rd:Sudo:mz")
@@ -12999,7 +12999,7 @@ if text == ("مسح الردود الانلاين العامه") then
   return send(msg_chat_id,msg_id,'\n*⌔ هاذا الامر يخص  المطور الثانوي * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/l_YT_l '}, },}}
+  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
   return send(msg.chat_id,msg.id,'*\n⌔ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(AFYONA .."List:Manager:inline3am")
@@ -13225,7 +13225,7 @@ if text == "حذف رد انلاين عام" then
   return send(msg_chat_id,msg_id,'\n*⌔ هاذا الامر يخص  المطور الثانوي * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/l_YT_l '}, },}}
+  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
   return send(msg.chat_id,msg.id,'*\n⌔ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local reply_markup = LuaTele.replyMarkup{
@@ -13245,7 +13245,7 @@ if text == ("الردود الانلاين العامه") then
   return send(msg_chat_id,msg_id,'\n*⌔ هاذا الامر يخص  المطور الثانوي * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/l_YT_l '}, },}}
+  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
   return send(msg.chat_id,msg.id,'*\n⌔ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(AFYONA .."List:Manager:inline3am")
@@ -13363,7 +13363,7 @@ Redis:set(AFYONA .."boballban"..creditcc,text)
 Redis:set(AFYONA .."boballid"..creditcc,banid)
 Redis:sadd(AFYONA .."booob",msg.sender.user_id)
 Redis:del(AFYONA .."booobb" .. msg.chat_id .. ":" .. msg.sender.user_id) 
-send(msg.chat_id,msg.id, "\n⌔ وسوينا لك حساب في بنك ارنوب 🏦\n⌔ وشحنالك 10 جنيه 💵 هدية\n\n⌔  رقم حسابك ↢ ( `"..creditcc.."` )\n⌔  نوع البطاقة ↢ ( ماستر 💳 )\n⌔  فلوسك ↢ ( 10 جنيه 💵 )  ","md",true)  
+send(msg.chat_id,msg.id, "\n⌔ وسوينا لك حساب في بنك ارنوب 🏦\n⌔ وشحنالك 10 دينار 💵 هدية\n\n⌔  رقم حسابك ↢ ( `"..creditcc.."` )\n⌔  نوع البطاقة ↢ ( ماستر 💳 )\n⌔  فلوسك ↢ ( 10 دينار 💵 )  ","md",true)  
 end 
 if text == "فيزا" then
 local ban = LuaTele.getUser(msg.sender.user_id)
@@ -13384,7 +13384,7 @@ Redis:set(AFYONA .."boballban"..creditvi,text)
 Redis:set(AFYONA .."boballid"..creditvi,banid)
 Redis:sadd(AFYONA .."booob",msg.sender.user_id)
 Redis:del(AFYONA .."booobb" .. msg.chat_id .. ":" .. msg.sender.user_id) 
-send(msg.chat_id,msg.id, "\n⌔ وسوينا لك حساب في بنك ارنوب 🏦\n⌔ وشحنالك 10 جنيه 💵 هدية\n\n⌔  رقم حسابك ↢ ( `"..creditvi.."` )\n⌔  نوع البطاقة ↢ ( فيزا 💳 )\n⌔  فلوسك ↢ ( 10 جنيه 💵 )  ","md",true)   
+send(msg.chat_id,msg.id, "\n⌔ وسوينا لك حساب في بنك ارنوب 🏦\n⌔ وشحنالك 10 دينار 💵 هدية\n\n⌔  رقم حسابك ↢ ( `"..creditvi.."` )\n⌔  نوع البطاقة ↢ ( فيزا 💳 )\n⌔  فلوسك ↢ ( 10 دينار 💵 )  ","md",true)   
 end 
 if text == "ارنوب" then
 local ban = LuaTele.getUser(msg.sender.user_id)
@@ -13405,7 +13405,7 @@ Redis:set(AFYONA .."boballban"..creditvi,text)
 Redis:set(AFYONA .."boballid"..creditvi,banid)
 Redis:sadd(AFYONA .."booob",msg.sender.user_id)
 Redis:del(AFYONA .."booobb" .. msg.chat_id .. ":" .. msg.sender.user_id) 
-send(msg.chat_id,msg.id, "\n⌔ وسوينا لك حساب في بنك ارنوب 🏦\n⌔ وشحنالك 10 جنيه 💵 هدية\n\n⌔  رقم حسابك ↢ ( `"..creditvi.."` )\n⌔  نوع البطاقة ↢ ( ارنوب 💳 )\n⌔  فلوسك ↢ ( 10 جنيه 💵 )  ","md",true)   
+send(msg.chat_id,msg.id, "\n⌔ وسوينا لك حساب في بنك ارنوب 🏦\n⌔ وشحنالك 10 دينار 💵 هدية\n\n⌔  رقم حسابك ↢ ( `"..creditvi.."` )\n⌔  نوع البطاقة ↢ ( ارنوب 💳 )\n⌔  فلوسك ↢ ( 10 دينار 💵 )  ","md",true)   
 end 
 if text == "اكسبرس" then
 local ban = LuaTele.getUser(msg.sender.user_id)
@@ -13426,7 +13426,7 @@ Redis:set(AFYONA .."boballban"..creditex,text)
 Redis:set(AFYONA .."boballid"..creditex,banid)
 Redis:sadd(AFYONA .."booob",msg.sender.user_id)
 Redis:del(AFYONA .."booobb" .. msg.chat_id .. ":" .. msg.sender.user_id) 
-send(msg.chat_id,msg.id, "\n⌔ وسوينا لك حساب في بنك ارنوب 🏦\n⌔ وشحنالك 10 جنيه 💵 هدية\n\n⌔  رقم حسابك ↢ ( `"..creditex.."` )\n⌔  نوع البطاقة ↢ ( اكسبرس 💳 )\n⌔  فلوسك ↢ ( 10 جنيه 💵 )  ","md",true)   
+send(msg.chat_id,msg.id, "\n⌔ وسوينا لك حساب في بنك ارنوب 🏦\n⌔ وشحنالك 10 دينار 💵 هدية\n\n⌔  رقم حسابك ↢ ( `"..creditex.."` )\n⌔  نوع البطاقة ↢ ( اكسبرس 💳 )\n⌔  فلوسك ↢ ( 10 دينار 💵 )  ","md",true)   
 end 
 end
 if text == "البنك" then
@@ -13476,7 +13476,7 @@ ballancee = Redis:get(AFYONA .."boob"..msg.sender.user_id) or 0
 if tonumber(ballancee) < 1 then
 return send(msg.chat_id,msg.id, "⌔  ماعندك فلوس ارسل الالعاب وابدأ بجمع الفلوس \n✦","md",true)
 end
-send(msg.chat_id,msg.id, "⌔  فلوسك "..ballancee.." جنيه 💵","md",true)
+send(msg.chat_id,msg.id, "⌔  فلوسك "..ballancee.." دينار 💵","md",true)
 else
 send(msg.chat_id,msg.id, "⌔  ماعندك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
 end
@@ -13491,7 +13491,7 @@ return false
 end
 if Redis:sismember(AFYONA .."booob",Remsg.sender.user_id) then
 ballanceed = Redis:get(AFYONA .."boob"..Remsg.sender.user_id) or 0
-send(msg.chat_id,msg.id, "⌔  فلوسه "..ballanceed.." جنيه 💵","md",true)
+send(msg.chat_id,msg.id, "⌔  فلوسه "..ballanceed.." دينار 💵","md",true)
 else
 send(msg.chat_id,msg.id, "⌔  ماعنده حساب بنكي ","md",true)
 end
@@ -13509,7 +13509,7 @@ cccc = Redis:get(AFYONA .."boobb"..msg.sender.user_id)
 uuuu = Redis:get(AFYONA .."bbobb"..msg.sender.user_id)
 pppp = Redis:get(AFYONA .."zrfff"..msg.sender.user_id) or 0
 ballancee = Redis:get(AFYONA .."boob"..msg.sender.user_id) or 0
-send(msg.chat_id,msg.id, "⌔  الاسم ↢ "..news.."\n⌔  الحساب ↢ `"..cccc.."`\n⌔  بنك ↢ ( ارنوب )\n⌔  نوع ↢ ( "..uuuu.." )\n⌔  الرصيد ↢ ( "..ballancee.." جنيه 💵 )\n⌔  الزرف ( "..pppp.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "⌔  الاسم ↢ "..news.."\n⌔  الحساب ↢ `"..cccc.."`\n⌔  بنك ↢ ( ارنوب )\n⌔  نوع ↢ ( "..uuuu.." )\n⌔  الرصيد ↢ ( "..ballancee.." دينار 💵 )\n⌔  الزرف ( "..pppp.." دينار 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "⌔  ماعندك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
 end
@@ -13539,7 +13539,7 @@ Redis:del(AFYONA .."boob"..Remsg.sender.user_id)
 Redis:del(AFYONA .."boobb"..Remsg.sender.user_id)
 Redis:del(AFYONA .."zrfff"..Remsg.sender.user_id)
 Redis:srem(AFYONA .."zrfffid", Remsg.sender.user_id)
-send(msg.chat_id,msg.id, "⌔  الاسم ↢ "..news.."\n⌔  الحساب ↢ `"..ccccc.."`\n⌔  بنك ↢ ( ارنوب )\n⌔  نوع ↢ ( "..uuuuu.." )\n⌔  الرصيد ↢ ( "..ballanceed.." جنيه 💵 )\n⌔  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n⌔  مسكين مسحت حسابه \n✦","md",true)
+send(msg.chat_id,msg.id, "⌔  الاسم ↢ "..news.."\n⌔  الحساب ↢ `"..ccccc.."`\n⌔  بنك ↢ ( ارنوب )\n⌔  نوع ↢ ( "..uuuuu.." )\n⌔  الرصيد ↢ ( "..ballanceed.." دينار 💵 )\n⌔  الزرف ↢ ( "..ppppp.." دينار 💵 )\n⌔  مسكين مسحت حسابه \n✦","md",true)
 else
 send(msg.chat_id,msg.id, "⌔  ماعنده حساب بنكي اصلاً ","md",true)
 end
@@ -13564,7 +13564,7 @@ ccccc = Redis:get(AFYONA .."boobb"..Remsg.sender.user_id)
 uuuuu = Redis:get(AFYONA .."bbobb"..Remsg.sender.user_id)
 ppppp = Redis:get(AFYONA .."zrfff"..Remsg.sender.user_id) or 0
 ballanceed = Redis:get(AFYONA .."boob"..Remsg.sender.user_id) or 0
-send(msg.chat_id,msg.id, "⌔  الاسم ↢ "..news.."\n⌔  الحساب ↢ `"..ccccc.."`\n⌔  بنك ↢ ( ارنوب )\n⌔  نوع ↢ ( "..uuuuu.." )\n⌔  الرصيد ↢ ( "..ballanceed.." جنيه 💵 )\n⌔  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "⌔  الاسم ↢ "..news.."\n⌔  الحساب ↢ `"..ccccc.."`\n⌔  بنك ↢ ( ارنوب )\n⌔  نوع ↢ ( "..uuuuu.." )\n⌔  الرصيد ↢ ( "..ballanceed.." دينار 💵 )\n⌔  الزرف ↢ ( "..ppppp.." دينار 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "⌔  ماعنده حساب بنكي ","md",true)
 end
@@ -13601,7 +13601,7 @@ Redis:del(AFYONA .."boob"..coniss)
 Redis:del(AFYONA .."boobb"..coniss)
 Redis:del(AFYONA .."zrfff"..coniss)
 Redis:srem(AFYONA .."zrfffid", coniss)
-send(msg.chat_id,msg.id, "⌔  الاسم ↢ "..news.."\n⌔  الحساب ↢ `"..ccccc.."`\n⌔  بنك ↢ ( ارنوب )\n⌔  نوع ↢ ( "..uuuuu.." )\n⌔  الرصيد ↢ ( "..ballanceed.." جنيه 💵 )\n⌔  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n⌔  مسكين مسحت حسابه \n✦","md",true)
+send(msg.chat_id,msg.id, "⌔  الاسم ↢ "..news.."\n⌔  الحساب ↢ `"..ccccc.."`\n⌔  بنك ↢ ( ارنوب )\n⌔  نوع ↢ ( "..uuuuu.." )\n⌔  الرصيد ↢ ( "..ballanceed.." دينار 💵 )\n⌔  الزرف ↢ ( "..ppppp.." دينار 💵 )\n⌔  مسكين مسحت حسابه \n✦","md",true)
 else
 send(msg.chat_id,msg.id, "⌔  ماعنده حساب بنكي اصلاً ","md",true)
 end
@@ -13626,7 +13626,7 @@ if Redis:get(AFYONA .."boballcc"..coniss) then
 local yty = Redis:get(AFYONA .."boballname"..coniss)
 local dfhb = Redis:get(AFYONA .."boballbalc"..coniss)
 local fsvhh = Redis:get(AFYONA .."boballban"..coniss)
-send(msg.chat_id,msg.id, "⌔  الاسم ↢ "..yty.."\n⌔  الحساب ↢ `"..coniss.."`\n⌔  بنك ↢ ( ارنوب )\n⌔  نوع ↢ ( "..fsvhh.." )\n⌔  الرصيد ↢ ( "..dfhb.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "⌔  الاسم ↢ "..yty.."\n⌔  الحساب ↢ `"..coniss.."`\n⌔  بنك ↢ ( ارنوب )\n⌔  نوع ↢ ( "..fsvhh.." )\n⌔  الرصيد ↢ ( "..dfhb.." دينار 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "⌔  مافيه حساب بنكي كذا","md",true)
 end
@@ -13657,7 +13657,7 @@ return send(msg.chat_id,msg.id,"⌔  مايمديك تضارب الحين\n⌔  
 end
 ballancee = Redis:get(AFYONA .."boob"..msg.sender.user_id) or 0
 if tonumber(coniss) < 99 then
-return send(msg.chat_id,msg.id, "⌔  الحد الادنى المسموح هو 100 جنيه 💵\n✦","md",true)
+return send(msg.chat_id,msg.id, "⌔  الحد الادنى المسموح هو 100 دينار 💵\n✦","md",true)
 end
 if tonumber(ballancee) < tonumber(coniss) then
 return send(msg.chat_id,msg.id, "⌔  فلوسك ماتكفي \n✦","md",true)
@@ -13670,13 +13670,13 @@ ballanceekku = coniss / 100 * modarbaa
 ballanceekkku = ballancee - ballanceekku
 Redis:set(AFYONA .."boob"..msg.sender.user_id , math.floor(ballanceekkku))
 Redis:setex(AFYONA .."iiooooo" .. msg.sender.user_id,1200, true)
-send(msg.chat_id,msg.id, "⌔  مضاربة فاشلة 📉\n⌔  نسبة الخسارة ↢ "..modarbaa.."%\n⌔  المبلغ الذي خسرته ↢ ( "..ballanceekku.." جنيه 💵 )\n⌔  فلوسك صارت ↢ ( "..ballanceekkku.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "⌔  مضاربة فاشلة 📉\n⌔  نسبة الخسارة ↢ "..modarbaa.."%\n⌔  المبلغ الذي خسرته ↢ ( "..ballanceekku.." دينار 💵 )\n⌔  فلوسك صارت ↢ ( "..ballanceekkku.." دينار 💵 )\n✦","md",true)
 elseif Descriptioontt == "2" or Descriptioontt == "4" then
 ballanceekku = coniss / 100 * modarbaa
 ballanceekkku = ballancee + ballanceekku
 Redis:set(AFYONA .."boob"..msg.sender.user_id , math.floor(ballanceekkku))
 Redis:setex(AFYONA .."iiooooo" .. msg.sender.user_id,1200, true)
-send(msg.chat_id,msg.id, "⌔  مضاربة ناجحة 📈\n⌔  نسبة الربح ↢ "..modarbaa.."%\n⌔  المبلغ الذي ربحته ↢ ( "..ballanceekku.." جنيه 💵 )\n⌔  فلوسك صارت ↢ ( "..ballanceekkku.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "⌔  مضاربة ناجحة 📈\n⌔  نسبة الربح ↢ "..modarbaa.."%\n⌔  المبلغ الذي ربحته ↢ ( "..ballanceekku.." دينار 💵 )\n⌔  فلوسك صارت ↢ ( "..ballanceekkku.." دينار 💵 )\n✦","md",true)
 else
 Redis:setex(AFYONA .."iiooooo" .. msg.sender.user_id,1200, true)
 send(msg.chat_id,msg.id, "⌔  تأخرت اليوم والبنك مسكر ارجع بعدين \n✦","md",true)
@@ -13711,7 +13711,7 @@ return send(msg.chat_id,msg.id,"⌔  مايمديك تستثمر الحين\n⌔
 end
 ballancee = Redis:get(AFYONA .."boob"..msg.sender.user_id) or 0
 if tonumber(coniss) < 99 then
-return send(msg.chat_id,msg.id, "⌔  الحد الادنى المسموح هو 100 جنيه 💵\n✦","md",true)
+return send(msg.chat_id,msg.id, "⌔  الحد الادنى المسموح هو 100 دينار 💵\n✦","md",true)
 end
 if tonumber(ballancee) < tonumber(coniss) then
 return send(msg.chat_id,msg.id, "⌔  فلوسك ماتكفي \n✦","md",true)
@@ -13721,7 +13721,7 @@ ballanceekk = coniss / 100 * hadddd
 ballanceekkk = ballancee + ballanceekk
 Redis:incrby(AFYONA .."boob"..msg.sender.user_id , math.floor(ballanceekk))
 Redis:setex(AFYONA .."iioooo" .. msg.sender.user_id,1200, true)
-send(msg.chat_id,msg.id, "⌔  استثمار ناجح 💰\n⌔  نسبة الربح ↢ "..hadddd.."%\n⌔  مبلغ الربح ↢ ( "..ballanceekk.." جنيه 💵 )\n⌔  فلوسك صارت ↢ ( "..ballanceekkk.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "⌔  استثمار ناجح 💰\n⌔  نسبة الربح ↢ "..hadddd.."%\n⌔  مبلغ الربح ↢ ( "..ballanceekk.." دينار 💵 )\n⌔  فلوسك صارت ↢ ( "..ballanceekkk.." دينار 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "⌔  ماعندك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
 end
@@ -13761,12 +13761,12 @@ if haddd == "1" or haddd == "3" then
 local ballanceek = ballancee + coniss
 Redis:incrby(AFYONA .."boob"..msg.sender.user_id , coniss)
 Redis:setex(AFYONA .."iiooo" .. msg.sender.user_id,1200, true)
-send(msg.chat_id,msg.id, "⌔  مبروك فزت بالحظ 🎉\n⌔  فلوسك قبل ↢ ( "..ballancee.." جنيه 💵 )\n⌔  فلوسك الحين ↢ ( "..ballanceek.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "⌔  مبروك فزت بالحظ 🎉\n⌔  فلوسك قبل ↢ ( "..ballancee.." دينار 💵 )\n⌔  فلوسك الحين ↢ ( "..ballanceek.." دينار 💵 )\n✦","md",true)
 else
 local ballanceekk = ballancee - coniss
 Redis:decrby(AFYONA .."boob"..msg.sender.user_id , coniss)
 Redis:setex(AFYONA .."iiooo" .. msg.sender.user_id,1200, true)
-send(msg.chat_id,msg.id, "⌔  للاسف خسرت بالحظ 😬\n⌔  فلوسك قبل ↢ ( "..ballancee.." جنيه 💵 )\n⌔  فلوسك الحين ↢ ( "..ballanceekk.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "⌔  للاسف خسرت بالحظ 😬\n⌔  فلوسك قبل ↢ ( "..ballancee.." دينار 💵 )\n⌔  فلوسك الحين ↢ ( "..ballanceekk.." دينار 💵 )\n✦","md",true)
 end
 else
 send(msg.chat_id,msg.id, "⌔  ماعندك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
@@ -13796,7 +13796,7 @@ if not Redis:sismember(AFYONA .."booob",msg.sender.user_id) then
 return send(msg.chat_id,msg.id, "⌔  ماعندك حساب بنكي ","md",true)
 end
 if tonumber(coniss) < 100 then
-return send(msg.chat_id,msg.id, "⌔  الحد الادنى المسموح به هو 100 جنيه \n✦","md",true)
+return send(msg.chat_id,msg.id, "⌔  الحد الادنى المسموح به هو 100 دينار \n✦","md",true)
 end
 ballancee = Redis:get(AFYONA .."boob"..msg.sender.user_id) or 0
 if tonumber(ballancee) < 100 then
@@ -13850,8 +13850,8 @@ UserNameyr = UserNamey / 10
 UserNameyy = UserNamey - UserNameyr
 Redis:decrby(AFYONA .."boob"..msg.sender.user_id , UserNamey)
 Redis:incrby(AFYONA .."boob"..fsvhhh , math.floor(UserNameyy))
-send(msg.chat_id,msg.id, "حوالة صادرة من بنك ارنوب\n\nالمرسل : "..news.."\nالحساب رقم : `"..cccc.."`\nنوع البطاقة : "..uuuu.."\nالمستلم : "..newss.."\nالحساب رقم : `"..text.."`\nنوع البطاقة : "..fsvhh.."\nخصمت 10% رسوم تحويل\nالمبلغ : "..UserNameyy.." جنيه 💵","md",true)
-send(fsvhhh,0, "حوالة واردة من بنك ارنوب\n\nالمرسل : "..news.."\nالحساب رقم : `"..cccc.."`\nنوع البطاقة : "..uuuu.."\nالمبلغ : "..UserNameyy.." جنيه 💵","md",true)
+send(msg.chat_id,msg.id, "حوالة صادرة من بنك ارنوب\n\nالمرسل : "..news.."\nالحساب رقم : `"..cccc.."`\nنوع البطاقة : "..uuuu.."\nالمستلم : "..newss.."\nالحساب رقم : `"..text.."`\nنوع البطاقة : "..fsvhh.."\nخصمت 10% رسوم تحويل\nالمبلغ : "..UserNameyy.." دينار 💵","md",true)
+send(fsvhhh,0, "حوالة واردة من بنك ارنوب\n\nالمرسل : "..news.."\nالحساب رقم : `"..cccc.."`\nنوع البطاقة : "..uuuu.."\nالمبلغ : "..UserNameyy.." دينار 💵","md",true)
 Redis:del(AFYONA .."trans" .. msg.chat_id .. ":" .. msg.sender.user_id) 
 Redis:del(AFYONA .."transn" .. msg.sender.user_id)
 else
@@ -13895,7 +13895,7 @@ ccccc = Redis:get(AFYONA .."boobb"..Remsg.sender.user_id)
 uuuuu = Redis:get(AFYONA .."bbobb"..Remsg.sender.user_id)
 ppppp = Redis:get(AFYONA .."zrfff"..Remsg.sender.user_id) or 0
 ballanceed = Redis:get(AFYONA .."boob"..Remsg.sender.user_id) or 0
-send(msg.chat_id,msg.id, "⌔  الاسم ↢ "..news.."\n⌔  الحساب ↢ `"..ccccc.."`\n⌔  بنك ↢ ( ارنوب )\n⌔  نوع ↢ ( "..uuuuu.." )\n⌔  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n⌔  صار رصيده ↢ ( "..ballanceed.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "⌔  الاسم ↢ "..news.."\n⌔  الحساب ↢ `"..ccccc.."`\n⌔  بنك ↢ ( ارنوب )\n⌔  نوع ↢ ( "..uuuuu.." )\n⌔  الزرف ↢ ( "..ppppp.." دينار 💵 )\n⌔  صار رصيده ↢ ( "..ballanceed.." دينار 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "⌔  ماعنده حساب بنكي ","md",true)
 end
@@ -13935,7 +13935,7 @@ ccccc = Redis:get(AFYONA .."boobb"..Remsg.sender.user_id)
 uuuuu = Redis:get(AFYONA .."bbobb"..Remsg.sender.user_id)
 ppppp = Redis:get(AFYONA .."zrfff"..Remsg.sender.user_id) or 0
 ballanceed = Redis:get(AFYONA .."boob"..Remsg.sender.user_id) or 0
-send(msg.chat_id,msg.id, "⌔  الاسم ↢ "..news.."\n⌔  الحساب ↢ `"..ccccc.."`\n⌔  بنك ↢ ( ارنوب )\n⌔  نوع ↢ ( "..uuuuu.." )\n⌔  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n⌔  صار رصيده ↢ ( "..ballanceed.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "⌔  الاسم ↢ "..news.."\n⌔  الحساب ↢ `"..ccccc.."`\n⌔  بنك ↢ ( ارنوب )\n⌔  نوع ↢ ( "..uuuuu.." )\n⌔  الزرف ↢ ( "..ppppp.." دينار 💵 )\n⌔  صار رصيده ↢ ( "..ballanceed.." دينار 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "⌔  ماعنده حساب بنكي ","md",true)
 end
@@ -14035,7 +14035,7 @@ return send(msg.chat_id,msg.id,"⌔  من شوي اخذت بخشيش استنى 
 end
 local jjjo = math.random(1,200);
 Redis:incrby(AFYONA .."boob"..msg.sender.user_id , jjjo)
-send(msg.chat_id,msg.id,"⌔  تكرم وهي بخشيش "..jjjo.." جنيه 💵","md",true)
+send(msg.chat_id,msg.id,"⌔  تكرم وهي بخشيش "..jjjo.." دينار 💵","md",true)
 Redis:setex(AFYONA .."iioo" .. msg.sender.user_id,600, true)
 else
 send(msg.chat_id,msg.id, "⌔  ماعندك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
@@ -14068,7 +14068,7 @@ end
 if Redis:sismember(AFYONA .."booob",Remsg.sender.user_id) then
 ballanceed = Redis:get(AFYONA .."boob"..Remsg.sender.user_id) or 0
 if tonumber(ballanceed) < 199 then
-return send(msg.chat_id,msg.id, "⌔  مايمديك تزرفه فلوسه اقل من 200 جنيه 💵","md",true)
+return send(msg.chat_id,msg.id, "⌔  مايمديك تزرفه فلوسه اقل من 200 دينار 💵","md",true)
 end
 local hrame = math.floor(math.random() * 200) + 1;
 local hramee = math.floor(math.random() * 5) + 1;
@@ -14079,7 +14079,7 @@ Redis:decrby(AFYONA .."boob"..Remsg.sender.user_id , hrame)
 Redis:setex(AFYONA .."hrame" .. Remsg.sender.user_id,900, true)
 Redis:incrby(AFYONA .."zrfff"..msg.sender.user_id,hrame)
 Redis:sadd(AFYONA .."zrfffid",msg.sender.user_id)
-send(msg.chat_id,msg.id, "⌔  خذ يالحرامي زرفته "..hrame.." جنيه 💵\n✦","md",true)
+send(msg.chat_id,msg.id, "⌔  خذ يالحرامي زرفته "..hrame.." دينار 💵\n✦","md",true)
 else
 Redis:setex(AFYONA .."polic" .. msg.sender.user_id,300, true)
 send(msg.chat_id,msg.id, "⌔  مسكتك الشرطة وانتا تزرف 🚔\n✦","md",true)
@@ -14137,7 +14137,7 @@ ratbk = "5000"
 your_job = "فتاحه 💋"
 end
 local ballancee = Redis:get(AFYONA .."boob"..msg.sender.user_id) or 0
-send(msg.chat_id,msg.id,"⌔ اشعار ايداع "..neews.."\n⌔ وظيفتك : "..your_job.."\n⌔ المبلغ : "..ratbk.." جنيه 💵\n⌔ نوع العملية : اضافة راتب\n⌔ رصيدك الحين : "..ballancee.." جنيه 💵","md",true)
+send(msg.chat_id,msg.id,"⌔ اشعار ايداع "..neews.."\n⌔ وظيفتك : "..your_job.."\n⌔ المبلغ : "..ratbk.." دينار 💵\n⌔ نوع العملية : اضافة راتب\n⌔ رصيدك الحين : "..ballancee.." دينار 💵","md",true)
 Redis:setex(AFYONA .."iiioo" .. msg.sender.user_id,600, true)
 else
 send(msg.chat_id,msg.id, "⌔  ماعندك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
@@ -14214,22 +14214,22 @@ if text == 'مميز' and tonumber(balance)  >= 2000 then
 Redis:decrby(AFYONA .."boob"..msg.sender.user_id , 2000)
 Redis:sadd(AFYONA .."Special:Group"..msg_chat_id,msg.sender.user_id) 
 Redis:del(AFYONA ..msg.chat_id..msg.sender.user_id.."txtrtb") 
-return send(msg.chat_id,msg.id,"⌔ تم رفعك مميز بنجاح وخصم 3000 جنيه من فلوسك")
+return send(msg.chat_id,msg.id,"⌔ تم رفعك مميز بنجاح وخصم 3000 دينار من فلوسك")
 elseif text == "ادمن" and tonumber(balance)  >= 4000 then
 Redis:decrby(AFYONA .."boob"..msg.sender.user_id , 4000)
 Redis:sadd(AFYONA .."Admin:Group"..msg_chat_id,msg.sender.user_id) 
 Redis:del(AFYONA ..msg.chat_id..msg.sender.user_id.."txtrtb") 
-return send(msg.chat_id,msg.id,"⌔ تم رفعك ادمن بنجاح وخصم 4000 جنيه من فلوسك")
+return send(msg.chat_id,msg.id,"⌔ تم رفعك ادمن بنجاح وخصم 4000 دينار من فلوسك")
 elseif text == "مدير" and tonumber(balance)  >= 6000 then
 Redis:decrby(AFYONA .."boob"..msg.sender.user_id , 6000)
 Redis:sadd(AFYONA .."Manger:Group"..msg_chat_id,msg.sender.user_id) 
 Redis:del(AFYONA ..msg.chat_id..msg.sender.user_id.."txtrtb") 
-return send(msg.chat_id,msg.id,"⌔ تم رفعك مدير بنجاح وخصم 6000 جنيه من فلوسك")
+return send(msg.chat_id,msg.id,"⌔ تم رفعك مدير بنجاح وخصم 6000 دينار من فلوسك")
 elseif text == "منشئ" and tonumber(balance)  >= 8000 then 
 Redis:decrby(AFYONA .."boob"..msg.sender.user_id , 8000)
 Redis:sadd(AFYONA .."Creator:Group"..msg_chat_id,msg.sender.user_id) 
 Redis:del(AFYONA ..msg.chat_id..msg.sender.user_id.."txtrtb") 
-return send(msg.chat_id,msg.id,"⌔ تم رفعك منشئ بنجاح وخصم 8000 جنيه من فلوسك")
+return send(msg.chat_id,msg.id,"⌔ تم رفعك منشئ بنجاح وخصم 8000 دينار من فلوسك")
 end
 end
 if text == "شراء رتبه" then
@@ -14244,13 +14244,13 @@ if tonumber(balance) < 2000 then
 return send(msg.chat_id,msg.id,"⌔ فلوسك لا تكفي لشراء اي رتبه")
 end
 if tonumber(balance)  >= 2000 and tonumber(balance) < 4000 then
-Txtrtb = "⌔ الرتب اللتي يمكنك شرائها هي \n\n⌔ `مميز` (2000 جنيه) \n\n ⌔ اضغط علي الرتبه ليتم نسخها"
+Txtrtb = "⌔ الرتب اللتي يمكنك شرائها هي \n\n⌔ `مميز` (2000 دينار) \n\n ⌔ اضغط علي الرتبه ليتم نسخها"
 elseif tonumber(balance) >= 4000 and tonumber(balance) < 6000 then
-Txtrtb = "⌔ الرتب اللتي يمكنك شرائها هي \n\n⌔ `مميز` (2000 جنيه)\n⌔ `ادمن` (4000 جنيه) \n\n ⌔ اضغط علي الرتبه ليتم نسخها"
+Txtrtb = "⌔ الرتب اللتي يمكنك شرائها هي \n\n⌔ `مميز` (2000 دينار)\n⌔ `ادمن` (4000 دينار) \n\n ⌔ اضغط علي الرتبه ليتم نسخها"
 elseif tonumber(balance) >= 6000 and tonumber(balance) < 8000 then
-Txtrtb = "⌔ الرتب اللتي يمكنك شرائها هي \n\n⌔ `مميز` (2000 جنيه)\n⌔ `ادمن` (4000 جنيه) \n⌔ `مدير` (6000 جنيه)\n\n ⌔ اضغط علي الرتبه ليتم نسخها"
+Txtrtb = "⌔ الرتب اللتي يمكنك شرائها هي \n\n⌔ `مميز` (2000 دينار)\n⌔ `ادمن` (4000 دينار) \n⌔ `مدير` (6000 دينار)\n\n ⌔ اضغط علي الرتبه ليتم نسخها"
 elseif tonumber(balance) >= 8000 then
-Txtrtb = "⌔ الرتب اللتي يمكنك شرائها هي \n\n⌔ `مميز` (2000 جنيه)\n⌔ `ادمن` (4000 جنيه) \n⌔ `مدير` (6000 جنيه)\n⌔ `منشئ` (8000 جنيه)\n\n ⌔ اضغط علي الرتبه ليتم نسخها"
+Txtrtb = "⌔ الرتب اللتي يمكنك شرائها هي \n\n⌔ `مميز` (2000 دينار)\n⌔ `ادمن` (4000 دينار) \n⌔ `مدير` (6000 دينار)\n⌔ `منشئ` (8000 دينار)\n\n ⌔ اضغط علي الرتبه ليتم نسخها"
 end
 Redis:setex(AFYONA ..msg.chat_id..msg.sender.user_id.."txtrtb",180,true)
 return send(msg.chat_id,msg.id,Txtrtb,"md")
@@ -14276,7 +14276,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14287,7 +14287,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14298,7 +14298,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14309,7 +14309,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14320,7 +14320,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14331,7 +14331,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14342,7 +14342,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14353,7 +14353,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ  ', url = 't.me/l_YT_l '}, 
+{text = '᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ  ', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14364,7 +14364,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14375,7 +14375,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14386,7 +14386,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14397,7 +14397,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14408,7 +14408,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14419,7 +14419,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14430,7 +14430,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14441,7 +14441,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14453,7 +14453,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14464,7 +14464,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14475,7 +14475,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14486,7 +14486,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14497,7 +14497,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14508,7 +14508,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14519,7 +14519,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14530,7 +14530,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14541,7 +14541,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14552,7 +14552,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14563,7 +14563,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14574,7 +14574,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14585,7 +14585,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14596,7 +14596,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ  ', url = 't.me/l_YT_l '}, 
+{text = '᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ  ', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14607,7 +14607,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14618,7 +14618,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14629,7 +14629,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14640,7 +14640,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14651,7 +14651,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14662,7 +14662,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14673,7 +14673,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14684,7 +14684,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14695,7 +14695,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14706,7 +14706,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14717,7 +14717,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14728,7 +14728,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14739,7 +14739,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14750,7 +14750,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14761,7 +14761,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14773,7 +14773,7 @@ if not msg.Manger then
 return send(msg_chat_id,msg_id,'\n*⌔ هاذا الامر يخص  '..Controller_Num(6)..' * ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/l_YT_l '}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
 return send(msg.chat_id,msg.id,'*\n⌔ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(AFYONA .."List:Manager"..msg_chat_id.."")
@@ -14879,7 +14879,7 @@ if text then
 if text == 'بحث' or text == '^بحث (.*)$' then
 local search = text:match("^بحث (.*)$")
 local json = json:decode(http.request("https://api-jack.ml/api18.php?search="..URL.escape(search)..""))
-local datar = {data = {{text = "⌔ ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔  ⌔" , url = 'https://t.me/l_YT_l'}}}
+local datar = {data = {{text = "⌔ ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔  ⌔" , url = 'https://t.me/R125R'}}}
 for i = 1,5 do
 title = json.results[i].title
 link = json.results[i].url
@@ -15307,14 +15307,14 @@ send(msg.chat_id,msg.id,"⌔ للمبرمج افـيـونا  فقط")
 end
 end
 
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
-photo = "https://t.me/l_YT_l/25"
+if text == 'l_03_l177l_03_l177BOTBOT' or text == 'l_03_l177l_03_l177BOTBOT' or text == 'l_03_l1l_03_l177BOT77BOT' or text == 'l_03_l177l_03_l177BOTBOT' then
+photo = "https://t.me/R125R/25"
 local T =[[
-[⍟ 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙰𝚁𝙽𝙾𝙿](t.me/l_YT_l) 
+[⍟ 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙰𝚁𝙽𝙾𝙿](t.me/R125R) 
 
-[⍟ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝙾𝙽 𝚂𝙾𝚄𝚁𝙲𝙴 𝚃𝙴𝙻𝙴 ](t.me/l_YT_l)
+[⍟ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝙾𝙽 𝚂𝙾𝚄𝚁𝙲𝙴 𝚃𝙴𝙻𝙴 ](t.me/R125R)
 
-[⍟ 𝙵𝙾𝙻𝙻𝙾𝚆 𝚃𝙷𝙴 𝙱𝚄𝚃𝚃𝙾𝙽𝚂 𝙱𝙴𝙻𝙾𝚆 ](t.me/l_YT_l)
+[⍟ 𝙵𝙾𝙻𝙻𝙾𝚆 𝚃𝙷𝙴 𝙱𝚄𝚃𝚃𝙾𝙽𝚂 𝙱𝙴𝙻𝙾𝚆 ](t.me/R125R)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15353,7 +15353,7 @@ data = {
 {text = 'اوامر القفل', data = msg.sender.user_id..'/NoNextSeting'}, {text = 'اوامر التعطيل', data = msg.sender.user_id..'/listallAddorrem'}, 
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -15383,7 +15383,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -15404,7 +15404,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -15425,7 +15425,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -15446,7 +15446,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -15467,7 +15467,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -15488,7 +15488,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -15509,7 +15509,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -16754,7 +16754,7 @@ data = {
 {text = 'اضـف البـوت الـي مجـموعتك ↪', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l'}, 
+{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -16767,7 +16767,7 @@ data = {
 {text = 'اضـف البـوت الـي مجـموعتك ↪', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l'}, 
+{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -16940,7 +16940,7 @@ local Text ='🫂 تم اختيار قران'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔',url="t.me/l_YT_l"}
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔',url="t.me/R125R"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -17142,7 +17142,7 @@ keyboard.inline_keyboard = {
 {text = '⌔️ غنيلي بابلو ⌔️', callback_data = IdUser..'/Sinyly17@'},{text = '⌔️ مـحـمـد مـنـيـر ⌔️', callback_data = IdUser..'/Sinyly18@'},
 },
 {
-{text = '⌔️᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ⌔️', url = "https://t.me/l_YT_l"}
+{text = '⌔️᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ⌔️', url = "https://t.me/R125R"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -18073,7 +18073,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {{text = 'عـربي', data = msg.sender.user_id..'toar'},{text = 'English ', data = msg.sender.user_id..'toen'}},
-{{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = "https://t.me/l_YT_l "}},
+{{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = "https://t.me/R125R"}},
 }
 }
 return send(msg_chat_id,msg_id, [[*
@@ -18131,7 +18131,7 @@ end
 ------------------------------------ كود لوحة الاعضاء  -------------------
 if text == '٭ مـبـرمـج السـورس ٭' or text == 'افيونه' or text == 'رسو' or text == 'مطور السورس' or text == 'المبرمج' then
 local tt =[[
-⌯︙[مبرمج السورس](https://t.me/l_YT_l) .
+⌯︙[مبرمج السورس](https://t.me/R125R) .
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = '٭ مـبـرمـج السـورس ٭ .', url = "https://t.me/l_03_l"}},}
@@ -18140,23 +18140,23 @@ https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. ms
 ------------------------------------ كود لوحة الاعضاء  -------------------
 if text == 'الـسـورس' or text == 'قناة التحديثات' or text == 'تحديثات السورس' then
 local tt =[[
-⌯︙[⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔](https://t.me/l_YT_l) .
+⌯︙[⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔](https://t.me/R125R) .
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = '‹ ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔ .', url = "https://t.me/l_YT_l"}},}
+keyboard.inline_keyboard = {{{text = '‹ ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔ .', url = "https://t.me/R125R"}},}
 local msgg = msg_id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo=https://t.me/l_YT_l&caption=".. URL.escape(tt).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) end
+https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo=https://t.me/R125R&caption=".. URL.escape(tt).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) end
 ------------------------------------ كود لوحة الاعضاء  -------------------
 if text == 'قـنـاه الـسـورس›' or text == 'قناه السورس' or text == 'قناة السورس' then
-photo = "https://t.me/l_YT_l"
+photo = "https://t.me/R125R"
 local tt =[[
-⌯︙[⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔](https://t.me/l_YT_l) .
+⌯︙[⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔](https://t.me/R125R) .
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔ .', url = "https://t.me/l_YT_l"}},
+keyboard.inline_keyboard = {{{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔ .', url = "https://t.me/R125R"}},
 }
 local msgg = msg_id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo=https://t.me/l_YT_l&caption=".. URL.escape(tt).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) end
+https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo=https://t.me/R125R&caption=".. URL.escape(tt).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) end
 -------------------------------------------------------------------------
 if text == "تفعيل البوت بصوره ⌔" then
   if not msg.Devss then
@@ -18266,7 +18266,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔', url = 't.me/l_YT_l'}, 
+{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔', url = 't.me/R125R'}, 
 },
 }
 }
@@ -19914,7 +19914,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -19938,7 +19938,7 @@ if Text and Text:match('(%d+)/cancelkit') then
     type = 'inline',
     data = {
     {
-    {text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+    {text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
     },
     }
     }
@@ -19953,7 +19953,7 @@ if Text and Text:match('(%d+)/cancelkit') then
         type = 'inline',
         data = {
         {
-        {text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+        {text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
         },
         }
         }
@@ -20024,14 +20024,14 @@ if Redis:get(AFYONA ..'Set:array'..IdUser..':'..ChatId) == 'true1' then
 Redis:del(AFYONA ..'Set:array'..IdUser..':'..ChatId)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔',url='https://t.me/l_YT_l '}},
+{{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔',url='https://t.me/R125R'}},
 }
 local msg_idd = Msg_id/2097152/0.5
 return https.request("https://api.telegram.org/bot"..Token..'/editMessageText?chat_id='..ChatId..'&text='..URL.escape(" *⌔تم حفظ الردود بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 else
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔',url='https://t.me/l_YT_l '}},
+{{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ᥲ️︎ɾꪀ᥆ρ ⌔',url='https://t.me/R125R'}},
 }
 return https.request("https://api.telegram.org/bot"..Token..'/editMessageText?chat_id='..ChatId..'&text='..URL.escape(" *⌔تم تنفيذ الامر سابقا*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -20043,7 +20043,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔⌔️', url = 't.me/l_YT_l '}, 
+{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20061,7 +20061,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔⌔️', url = 't.me/l_YT_l '}, 
+{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20110,7 +20110,7 @@ send(Sudo_Id,0,'*\n⌔ تم تفعيل مجموعه جديده \n⌔من قام 
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '', url="t.me/l_YT_l "},
+{text = '', url="t.me/R125R"},
 },
 }
 local txxt = "⌔ تم تفعيل المجموعه و ترقيه {"..y.."} ادمنيه \n⌔️︙تم ترقية المالك "
@@ -20131,7 +20131,7 @@ data = {
 {text = 'الغاء كتم', data = IdUser..'unmute'..replyy}, 
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20149,7 +20149,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20172,7 +20172,7 @@ data = {
 {text = 'الغاء حظر', data = IdUser..'unban'..replyy}, 
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20191,7 +20191,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20212,7 +20212,7 @@ data = {
 {text = 'الغاء تقييد', data = IdUser..'unkid'..replyy}, 
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20230,7 +20230,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20446,7 +20446,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20505,7 +20505,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20552,7 +20552,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20569,7 +20569,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20589,7 +20589,7 @@ data = {
 {text = 'عوده', data = IdUser..'/chback'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20609,7 +20609,7 @@ data = {
 {text = 'عوده', data = IdUser..'/chback'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20652,7 +20652,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20706,7 +20706,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20746,7 +20746,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20798,7 +20798,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20858,7 +20858,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20898,7 +20898,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20918,7 +20918,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = ' ⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -20969,7 +20969,7 @@ data = {
 {text = 'اوامر القفل', data = IdUser..'/NoNextSeting'}, {text = 'اوامر التعطيل', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/l_YT_l '}, 
+{text = '⌔ ᥉᥆uɾᥴ︎ᥱ︎ ⌔️', url = 't.me/R125R'}, 
 },
 }
 }
